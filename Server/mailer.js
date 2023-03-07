@@ -9,14 +9,14 @@ async function sendmail(to_mail,link) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "rsmore2232@gmail.com",
-      pass: "olmbarvdtvlioyci", // PERSON ID OF ME DONT USE IT 
+      user: "owccontactus.com",
+      pass: "ylitrfcawcmwxfkt", // PERSON ID OF ME DONT USE IT 
     },
   });
  
   let mailOptions =null;
     mailOptions = {
-      from: "rsmore2232@gmail.com", // sender address
+      from: "owccontactus@gmail.com", // sender address
       to: to_mail, // list of receivers
       subject: "Do not share link", // Subject line
       html: contents, // plain text body

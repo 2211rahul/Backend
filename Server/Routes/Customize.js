@@ -26,14 +26,14 @@ route.post("/custom", (req, res) => {
       const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "rsmore2232@gmail.com",
-          pass: "olmbarvdtvlioyci", // PERSON ID OF ME DONT USE IT
+          user: "owccontactus@gmail.com",
+          pass: "ylitrfcawcmwxfkt", // PERSON ID OF ME DONT USE IT
         },
       });
 
       let mailOptions = null;
       mailOptions = {
-        from: "rsmore2232@gmail.com", // sender address
+        from: "owccontactus@gmail.com", // sender address
         to: email, // list of receivers
         subject:"This is response Generated for Customization" , // Subject line
         html:subject +desc, // plain text body
