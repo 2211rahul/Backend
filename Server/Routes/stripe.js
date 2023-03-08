@@ -1,3 +1,4 @@
+
 import { Router } from "express";
 import Stripe from "../models/Booking.js";
 const router=Router()
@@ -22,7 +23,6 @@ router.post("/payment", async (req, res) => {
 router.get("/payment",(req,res)=>{
 
 Stripe.find().then((resolve=>{
-
   res.send(res.json(resolve))
 }))
 

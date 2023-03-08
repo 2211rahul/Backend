@@ -18,9 +18,10 @@ route.post('/user', async (req,res)=>{
         phoneno:req.body.phoneno,
            role:req.body.role    
         })
-       await User1.save().then((u)=>res.status(200).send("User Created")).catch(err=>console.log(err))
+       await User1.save().then((u)=>res.status(200).send("User Created")).catch(err=>res.send(err))
         } catch (error) {
         console.log(error)
+        
         
       }
     })  
@@ -34,9 +35,9 @@ route.post('/Login',(req,res)=>{
   
   {if(user){
      if(password===user.password){
-      res.send(200, user)
+      res.status(200).send(user)
      }else{
-        res.send(420,{message:"Not valid pass"})
+        res.status(420).send({message:"Not valid pass"})
      }
    
   
