@@ -62,7 +62,7 @@ route.get("/viewnewpasspage/:token",(req,resp)=>{
 route.post('/resetpassword', (req, res) => {
     const {email,password}=req.body;
     console.log("inside a ");
-    User.updateOne({ email: email }, { $set: { password: password } }, { new: true }).then(() => res.send("updated Successfully")).catch(err =>  res.send(err));
+    User.updateOne({ email: email }, { $set: { password: password } }, { new: true }).then(() => res.redirect("https://frontend-gold-two.vercel.app/Login")).catch(err =>  res.send(err));
 
 })
 
