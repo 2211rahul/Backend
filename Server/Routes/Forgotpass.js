@@ -37,7 +37,7 @@ route.post('/Changepass', (req, res) => {
 
 
 // we can rev request on link which is send via enmail
-route.get("/viewnewpasspage/:token",(req,resp)=>{
+route.get("https://cdac-project.onrender.com/viewnewpasspage/:token",(req,resp)=>{
     const token = req.params;
     console.log(token);
     try {
