@@ -8,6 +8,7 @@ import jwt from 'jsonwebtoken';
 // encript password  
 //     const encrptPassword = ''+ crypto.SHA256(`${password}`)
 import sendmail from '../mailer.js';
+import url from "../config.js";
 const signature = "@whgdxhfwfwhfwhyef";
 let userdata;
 
@@ -25,7 +26,8 @@ route.post('/Changepass', (req, res) => {
 //              providing link to mail which will be containt only 10 min
 //             const token = jwt.sign(email,signature,{expiresIn:"10m"});
             const token = jwt.sign(email,signature);
-            const link =`http://localhost:5000/Reset/viewnewpasspage/${token}`
+            /* const link =`http://localhost:5000/Reset/viewnewpasspage/${token}` */
+            const link =url.server+`/Reset/viewnewpasspage/${token}`
             const rt = sendmail(email,link);
             res.send("sucess");
         } 
@@ -51,7 +53,7 @@ route.get("/viewnewpasspage/:token",(req,resp)=>{
 })
 
 
-//   Changepass
+
 
 
 
