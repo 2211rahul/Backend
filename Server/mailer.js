@@ -9,7 +9,7 @@ async function sendmail(to_mail,link) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "owccontactus.com",
+      user: "owccontactus@gmail.com",
       pass: "ylitrfcawcmwxfkt", // PERSON ID OF ME DONT USE IT 
     },
   });

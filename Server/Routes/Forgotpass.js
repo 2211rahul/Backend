@@ -8,7 +8,7 @@ import jwt from 'jsonwebtoken';
 // encript password  
 //     const encrptPassword = ''+ crypto.SHA256(`${password}`)
 import sendmail from '../mailer.js';
-const signature = "@svt#4mx&5ccd81961#chu";
+const signature = "@whgdxhfwfwhfwhyef";
 let userdata;
 
 
